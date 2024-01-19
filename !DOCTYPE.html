@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스코어보드</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        #scoreboard {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .card {
+            margin: 0 10px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        input {
+            height: 20px;
+            margin-bottom: 10px;
+        }
+        button {
+            margin-top: 10px;
+            padding: 8px 16px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div id="scoreboard">
+    <!-- Player 1 Card -->
+    <div class="card">
+        <h2>Player 1</h2>
+        <input type="text" placeholder="이름을 입력하세요">
+        <p id="score1">0</p>
+        <button onclick="updateScore('score1', 10)">+10</button>
+        <button onclick="updateScore('score1', -10)">-10</button>
+    </div>
+
+    <!-- Player 2 Card -->
+    <div class="card">
+        <h2>Player 2</h2>
+        <input type="text" placeholder="이름을 입력하세요">
+        <p id="score2">0</p>
+        <button onclick="updateScore('score2', 10)">+10</button>
+        <button onclick="updateScore('score2', -10)">-10</button>
+    </div>
+
+    <!-- Player 3 Card -->
+    <div class="card">
+        <h2>Player 3</h2>
+        <input type="text" placeholder="이름을 입력하세요">
+        <p id="score3">0</p>
+        <button onclick="updateScore('score3', 10)">+10</button>
+        <button onclick="updateScore('score3', -10)">-10</button>
+    </div>
+
+    <!-- Player 4 Card -->
+    <div class="card">
+        <h2>Player 4</h2>
+        <input type="text" placeholder="이름을 입력하세요">
+        <p id="score4">0</p>
+        <button onclick="updateScore('score4', 10)">+10</button>
+        <button onclick="updateScore('score4', -10)">-10</button>
+    </div>
+
+    <!-- Player 5 Card -->
+    <div class="card">
+        <h2>Player 5</h2>
+        <input type="text" placeholder="이름을 입력하세요">
+        <p id="score5">0</p>
+        <button onclick="updateScore('score5', 10)">+10</button>
+        <button onclick="updateScore('score5', -10)">-10</button>
+    </div>
+
+    <!-- Player 6 Card -->
+    <div class="card">
+        <h2>Player 6</h2>
+        <input type="text" placeholder="이름을 입력하세요">
+        <p id="score6">0</p>
+        <button onclick="updateScore('score6', 10)">+10</button>
+        <button onclick="updateScore('score6', -10)">-10</button>
+    </div>
+</div>
+
+<script>
+    function updateScore(elementId, points) {
+        var scoreElement = document.getElementById(elementId);
+        var currentScore = parseInt(scoreElement.innerText);
+        var newScore = currentScore + points;
+
+        scoreElement.innerText = newScore;
+    }
+</script>
+
+</body>
+</html>
